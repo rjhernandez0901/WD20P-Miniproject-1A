@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>MARVEL</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <!--navbar-->
+    <div class="container-fluid bg-light">
+        <div class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="marvel_logo-removebg-preview.png" style="width:100px;">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#NavBarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="NavBarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="characaters.html">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto" role="search">
+                    <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+                    <buton type="submit" class="btn btn-outline-dark">Search</buton>
+                </form>
+                <a href="#"><button class="btn btn-outline-dark ms-2" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modalLoginForm">Log In</button></a>
+
+                <!-- modal -->
+                <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mx-3 bg-light">
+                                <!-- Pills navs -->
+
+                                <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active btn btn-outline-dark" id="tab-login"
+                                            data-bs-toggle="tab" href="#pills-login" role="tab"
+                                            aria-controls="pills-login" aria-selected="true">Login</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link btn-outline-dark" id="tab-register" data-bs-toggle="tab"
+                                            href="#pills-register" role="tab" aria-controls="pills-register"
+                                            aria-selected="false">Register</a>
+                                    </li>
+                                </ul>
+                                <!-- Pills navs -->
+
+                                <!-- Pills content -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+                                        aria-labelledby="tab-login">
+                                        <form>
+                                            <div class="text-center mb-3">
+                                                <p>Sign in with:</p>
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-facebook-f text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-google text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-twitter text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-github text-dark"></i>
+                                                </button>
+                                            </div>
+
+                                            <p class="text-center">or:</p>
+
+                                            <!-- Email input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="email" id="loginName" class="form-control" />
+                                                <label class="form-label" for="loginName">Email or username</label>
+                                            </div>
+
+                                            <!-- Password input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="password" id="loginPassword" class="form-control" />
+                                                <label class="form-label" for="loginPassword">Password</label>
+                                            </div>
+
+                                            <!-- 2 column grid layout -->
+                                            <div class="row mb-4">
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check mb-3 mb-md-0">
+                                                        <input class="form-check-input bg-dark" type="checkbox" value=""
+                                                            id="loginCheck" checked />
+                                                        <label class="form-check-label" for="loginCheck"> Remember me
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <!-- Simple link -->
+                                                    <a class="link-dark" href="#!">Forgot password?</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Submit button -->
+                                            <button type="submit" class="btn btn-outline-dark btn-block mb-4">Sign
+                                                in</button>
+
+                                            <!-- Register buttons -->
+                                            <div class="text-center">
+                                                <p>Not a member? <a class="link-dark" href="#!">Register</a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="pills-register" role="tabpanel"
+                                        aria-labelledby="tab-register">
+                                        <form>
+                                            <div class="text-center mb-3">
+                                                <p>Sign up with:</p>
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-facebook-f text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-google text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-twitter text-dark"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                                    <i class="fab fa-github text-dark"></i>
+                                                </button>
+                                            </div>
+
+                                            <p class="text-center">or:</p>
+
+                                            <!-- Name input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="registerName" class="form-control" />
+                                                <label class="form-label" for="registerName">Name</label>
+                                            </div>
+
+                                            <!-- Username input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="registerUsername" class="form-control" />
+                                                <label class="form-label" for="registerUsername">Username</label>
+                                            </div>
+
+                                            <!-- Email input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="email" id="registerEmail" class="form-control" />
+                                                <label class="form-label" for="registerEmail">Email</label>
+                                            </div>
+
+                                            <!-- Password input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="password" id="registerPassword" class="form-control" />
+                                                <label class="form-label" for="registerPassword">Password</label>
+                                            </div>
+
+                                            <!-- Repeat Password input -->
+                                            <div class="form-outline mb-2">
+                                                <input type="password" id="registerRepeatPassword"
+                                                    class="form-control" />
+                                                <label class="form-label" for="registerRepeatPassword">Repeat
+                                                    password</label>
+                                            </div>
+
+                                            <!-- Checkbox -->
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input bg-dark" type="checkbox" value=""
+                                                    id="loginCheck" checked />
+                                                <label class="form-check-label" for="loginCheck"> I have read and agree
+                                                    to the terms
+                                                </label>
+                                            </div>
+
+
+                                            <!-- Submit button -->
+                                            <button type="submit" class="btn btn-outline-dark btn-block mb-3">Sign
+                                                in</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Pills content -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of modal -->
+            </div>
+        </div>
+    </div>
+    <!--end of navbar-->
+    <!-- contact -->
+    <div class="container my-5">
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+        <section class="contact-section dark-grey-text mb-5">
+
+            <style>
+                .contact-section .form .btn-floating {
+                    left: 3px;
+                }
+            </style>
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card-body form">
+                            <h3 class="font-weight-bold dark-grey-text mt-4"><i
+                                    class="fas fa-envelope pr-2 mr-1"></i>Write to us:</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-name" class="form-control"
+                                            placeholder="First Name">
+                                        <label for="form-contact-name" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-email" class="form-control"
+                                            placeholder="Last Name">
+                                        <label for="form-contact-name" class=""></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="form-contact-phone" class="form-control"
+                                            placeholder="Email">
+                                        <label for="form-contact-phone" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="number" id="form-contact-company" class="form-control"
+                                            placeholder="+63">
+                                        <label for="form-contact-company" class=""></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <textarea id="form-contact-message" class="form-control md-textarea" rows="10"
+                                            placeholder="Enter Your Message"></textarea>
+                                        <label for="form-contact-message"></label>
+                                        <a class="btn-floating btn-lg blue">
+                                            <i class="far fa-paper-plane"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body contact text-center h-100 white-text">
+
+                            <h3 class="font-weight-bold my-4 pb-2">Contact information</h3>
+                            <ul class="text-lg-left list-unstyled ml-4">
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt pr-2"></i>Mataasnakahoy</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone pr-2"></i>+639271883290</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope pr-2"></i>marvel@gmail.com</p>
+                                </li>
+                            </ul>
+                            <hr class="hr-light my-4">
+                            <ul class="list-inline text-center list-unstyled">
+                                <li class="list-inline-item">
+                                    <a class="p-2 fa-lg tw-ic">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="p-2 fa-lg li-ic">
+                                        <i class="fab fa-linkedin-in"> </i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="p-2 fa-lg ins-ic">
+                                        <i class="fab fa-instagram"> </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end of contact -->
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">Rodante Hernandez</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>
